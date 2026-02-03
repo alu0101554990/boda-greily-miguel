@@ -4,20 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greily & Miguel — Nuestra boda</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JS -->
   <script src="main.js" defer></script>
 </head>
 
 <body>
 
-  <header class="hero">
-    <h1>Greily & Miguel</h1>
-    <p>Nos casamos</p>
-    <time datetime="2026-07-18">18 · 07 · 2026</time>
+  <!-- SPLASH (pantalla inicial que se desvanece) -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <img src="img/1.jpeg" alt="" class="splash__img">
+  </div>
+
+  <!-- PORTADA PRINCIPAL -->
+  <header class="cover">
+
+    <!-- CONTENEDOR: imagen + lirios (anclados a la imagen) -->
+    <div class="image-frame" aria-hidden="true">
+      <img src="img/13.jpg" alt="Greily y Miguel" class="cover__img">
+
+      <img src="img/lirio.png" class="frame__corner frame__corner--tl" alt="">
+      <img src="img/lirio.png" class="frame__corner frame__corner--tr" alt="">
+      <img src="img/lirio.png" class="frame__corner frame__corner--bl" alt="">
+      <img src="img/lirio.png" class="frame__corner frame__corner--br" alt="">
+    </div>
+
+    <div class="cover__text">
+  <h1 class="cover__title">Nuestra boda</h1>
+  <p class="cover__date">18 · 07 · 2026</p>
+
+  <h1 class="title">Greily & Miguel</h1>
+</div>
+
   </header>
 
   <main>
-
     <section id="historia">
       <h2>Nuestra historia</h2>
       <p>Texto bonito aquí.</p>
@@ -36,20 +65,15 @@
     <section id="fotos">
       <h2>Comparte tus fotos</h2>
       <p>Sube aquí las fotos del día.</p>
-      <a href="https://TU_ENLACE_DE_SUBIDA"
-         target="_blank"
-         class="btn">
+      <a href="https://TU_ENLACE_DE_SUBIDA" target="_blank" class="btn" rel="noopener">
         Subir fotos
       </a>
     </section>
-
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>Con cariño, Greily & Miguel</p>
   </footer>
 
 </body>
 </html>
-
-
