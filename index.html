@@ -41,16 +41,84 @@
   <h1 class="cover__title">Nuestra boda</h1>
   <p class="cover__date">18 · 07 · 2026</p>
 
-  <h1 class="title">Greily & Miguel</h1>
+  <div class="song">
+    <button class="song__btn" type="button" aria-label="Reproducir / pausar canción">
+        <img src="img/reproductor.png" alt="" class="song__icon" data-play="img/play.png" data-pause="img/pause.png">
+    </button>
+
+  <audio id="weddingSong" preload="none">
+    <source src="audio/cancion.mp3" type="audio/mpeg">
+  </audio>
+    <p class="song__subtitle">Escucha nuestra canción favorita</p>
+
+      
+  </div>
+
+
+
 </div>
+  <div class="separator">
+    <img src="img/separador.png" alt="Separador floral">
+  </div>
+
+<!-- NOMBRES GRANDES -->
+<div class="names-large">
+  <span class="name">Greily</span>
+  <span class="amp">&</span>
+  <span class="name">Miguel</span>
+</div>
+
+<!-- CARRUSEL DE FOTOS -->
+<div class="carousel">
+  <button class="carousel__btn prev" aria-label="Anterior">‹</button>
+
+  <div class="carousel__track">
+    <img src="img/2.jpeg" alt="Greily y Miguel">
+    <img src="img/3.jpeg" alt="Greily y Miguel">
+    <img src="img/4.jpeg" alt="Greily y Miguel">
+    <img src="img/5.jpeg" alt="Greily y Miguel">
+    <img src="img/6.jpeg" alt="Greily y Miguel">
+    <img src="img/7.jpeg" alt="Greily y Miguel">
+  </div>´
+
+  <button class="carousel__btn next" aria-label="Siguiente">›</button>
+</div>
+<section class="countdown" aria-label="Cuenta atrás para la boda">
+  <p class="countdown__subtitle">Ya queda menos</p>
+
+  <div class="countdown__grid" id="countdown">
+    <div class="countdown__item">
+      <span class="countdown__num" data-unit="days">00</span>
+      <span class="countdown__label">días</span>
+    </div>
+
+    <div class="countdown__item">
+      <span class="countdown__num" data-unit="hours">00</span>
+      <span class="countdown__label">horas</span>
+    </div>
+
+    <div class="countdown__item">
+      <span class="countdown__num" data-unit="minutes">00</span>
+      <span class="countdown__label">min</span>
+    </div>
+
+    <div class="countdown__item">
+      <span class="countdown__num" data-unit="seconds">00</span>
+      <span class="countdown__label">seg</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- SEPARADOR INFERIOR -->
+<div class="separator">
+  <img src="img/separador.png" alt="Separador floral">
+</div>
+
 
   </header>
 
   <main>
-    <section id="historia">
-      <h2>Nuestra historia</h2>
-      <p>Texto bonito aquí.</p>
-    </section>
 
     <section id="evento">
       <h2>La boda</h2>
