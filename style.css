@@ -494,3 +494,122 @@ section.countdown{
 .countdown__subtitle{
   margin-bottom: 0.6rem !important;
 }
+
+/* =========================
+   RESPONSIVE GLOBAL
+========================= */
+
+/* Evita desbordes horizontales */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Reduce gaps gigantes en pantallas pequeñas */
+@media (max-width: 900px){
+  .cover{
+    gap: 1.4rem;
+    padding: 2.5rem 1.2rem;
+  }
+}
+@media (max-width: 768px){
+  .cover__img{
+    max-width: 360px;
+  }
+
+  .frame__corner{
+    width: min(200px, 45%);
+  }
+
+  .frame__corner--tl{ top: -1.2rem; left: -1.2rem; }
+  .frame__corner--tr{ top: -1.2rem; right: -1.2rem; }
+  .frame__corner--bl{ bottom: -1.2rem; left: -1.2rem; }
+  .frame__corner--br{ bottom: -1.2rem; right: -1.2rem; }
+}
+
+@media (max-width: 480px){
+  .cover__img{
+    max-width: 300px;
+  }
+
+  .frame__corner{
+    width: min(150px, 42%);
+    opacity: 0.85;
+  }
+}
+@media (max-width: 480px){
+  .cover__title{
+    line-height: 0.95;
+  }
+
+  .cover__date{
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+  }
+}
+@media (max-width: 480px){
+  .song__icon{
+    width: 72px;
+  }
+
+  .song__subtitle{
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 90%;
+  }
+}
+@media (max-width: 600px){
+  .names-large{
+    gap: 0.8rem;
+    margin: 0.6rem 0;
+  }
+
+  .names-large .amp{
+    font-size: 1.2rem;
+  }
+}
+/* Desktop */
+.carousel__track img{
+  width: calc(100% / 3);
+}
+
+/* Tablet */
+@media (max-width: 768px){
+  .carousel__track img{
+    width: 50%;
+  }
+}
+
+/* Móvil */
+@media (max-width: 480px){
+  .carousel__track img{
+    width: 100%;
+  }
+
+  .carousel__btn{
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 600px){
+  .countdown__grid{
+    gap: 0.8rem;
+  }
+
+  .countdown__item{
+    padding: 0.6rem 0.4rem;
+  }
+
+  .countdown__label{
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 480px){
+  .separator img{
+    width: 90%;
+  }
+
+  .separator{
+    margin: 0.8rem 0;
+  }
+}
+
