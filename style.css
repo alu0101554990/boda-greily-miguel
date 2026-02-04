@@ -252,6 +252,7 @@ h2{
     padding: 2.2rem 1rem;
     gap: 1.2rem;
   }
+  
 
   .cover__img{
     max-width: 320px;
@@ -470,4 +471,26 @@ h2{
   text-align: center;
   margin: 0.6rem auto 2rem; /* 👈 ahora sí se nota */
   padding: 0 1.5rem;
+}
+
+/* ✅ 1) baja el gap general del header (te estaba separando todo) */
+.cover{
+  gap: 3.5rem !important;
+}
+
+/* ✅ 2) pega el carrusel con lo de abajo */
+.carousel{
+  margin: 1.2rem auto 0.4rem !important; /* arriba, laterales, abajo */
+}
+
+/* ✅ 3) el contador es un SECTION: quítale el padding global */
+section.countdown{
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 auto 1rem !important;
+}
+
+/* ✅ 4) compacta el interior del contador */
+.countdown__subtitle{
+  margin-bottom: 0.6rem !important;
 }
