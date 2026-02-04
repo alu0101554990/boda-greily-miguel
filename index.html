@@ -110,6 +110,34 @@
 </section>
 
 
+<section class="rsvp" id="rsvp">
+  <p class="rsvp__subtitle">¿Nos acompañas?</p>
+
+  <form class="rsvp__form" id="rsvpForm">
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Tu nombre"
+      required
+    >
+
+    <select name="asistencia" required>
+      <option value="" disabled selected>¿Asistirás?</option>
+      <option value="si">Sí, allí estaré</option>
+      <option value="no">No podré asistir</option>
+    </select>
+
+    <button type="submit" class="rsvp__btn" id="rsvpBtn">
+      Confirmar asistencia
+    </button>
+  </form>
+
+  <p class="rsvp__thanks" id="rsvpThanks" hidden>
+    ¡Gracias por confirmar! 💜
+  </p>
+</section>
+
+
 <!-- SEPARADOR INFERIOR -->
 <div class="separator">
   <img src="img/separador.png" alt="Separador floral">
