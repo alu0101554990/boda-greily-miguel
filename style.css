@@ -473,6 +473,59 @@ h2{
   padding: 0 1.5rem;
 }
 
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+  text-align: center;
+  padding: 2.5rem 1.5rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rsvp__subtitle{
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lila-text);
+  opacity: 0.9;
+  margin-bottom: 1.4rem;
+}
+
+/* Botón principal */
+.rsvp__btn{
+  display: inline-block;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+
+  background: var(--lila-text);
+  color: white;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rsvp__btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Texto inferior */
+.rsvp__note{
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--lila-text);
+  opacity: 0.75;
+}
+
+
 /* ✅ 1) baja el gap general del header (te estaba separando todo) */
 .cover{
   gap: 3.5rem !important;
@@ -612,4 +665,97 @@ html, body{
     margin: 0.8rem 0;
   }
 }
+@media (max-width: 480px){
+  .rsvp{
+    padding: 2rem 1rem 2.5rem;
+  }
 
+  .rsvp__btn{
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
+/* =========================
+   RSVP FORM
+========================= */
+
+.rsvp{
+  text-align: center;
+  padding: 2.5rem 1.5rem 3rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.rsvp__subtitle{
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lila-text);
+  margin-bottom: 1.6rem;
+}
+
+/* Form */
+.rsvp__form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* Inputs */
+.rsvp__form input,
+.rsvp__form select{
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.15);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Botón */
+.rsvp__btn{
+  margin-top: 0.6rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  border: none;
+
+  background: var(--lila-text);
+  color: white;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.rsvp__btn:hover{
+  transform: translateY(-2px);
+}
+
+/* Gracias */
+.rsvp__thanks{
+  margin-top: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--lila-text);
+}
+
+/* Mobile */
+@media (max-width: 480px){
+  .rsvp__form input,
+  .rsvp__form select,
+  .rsvp__btn{
+    width: 100%;
+  }
+}
+
+.rsvp--done{
+  background: #aaa !important;
+  cursor: default;
+  transform: none;
+}
