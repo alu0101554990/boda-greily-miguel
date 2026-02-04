@@ -127,3 +127,47 @@ document.addEventListener("DOMContentLoaded", () => {
     if (icon?.dataset.play) icon.src = icon.dataset.play;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("rsvpForm");
+  const btn = document.getElementById("rsvpBtn");
+  const thanks = document.getElementById("rsvpThanks");
+
+  if (!form || !btn || !thanks) return;
+
+  // Si ya confirmó antes
+  if (localStorage.getItem("rsvpDone")) {
+    form.hidden = true;
+    thanks.hidden = false;
+    return;
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Simula envío correcto
+    btn.textContent = "¡Gracias!";
+    btn.disabled = true;
+
+    setTimeout(() => {
+      form.hidden = true;
+      thanks.hidden = false;
+      localStorage.setItem("rsvpDone", "true");
+    }, 600);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("rsvpForm");
+  const btn = document.getElementById("rsvpBtn");
+
+  if (!form || !btn) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // evita recargar la página
+
+    btn.textContent = "¡Gracias!";
+    btn.disabled = true;
+    btn.classList.add("rsvp--done");
+  });
+});
