@@ -170,6 +170,46 @@ h2{
   }
 }
 
+.section-lila{
+  background: var(--lila-bg);
+  padding-bottom: 6rem; /* controla cuánto baja */
+}
+
+.separator{
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.separator img{
+  width: min(600px, 80vw);
+  height: auto;
+  opacity: 0.9;
+}
+
+.names{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.names h2{
+  font-family: 'Ballet', cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 200;
+  color: var(--lila-text);
+}
+
+.names span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--lila-text);
+}
+
+
+
 /* =========================
    LIRIOS (anclados a la foto)
 ========================= */
@@ -246,3 +286,188 @@ h2{
   color: #4a4a4a;
 }
 
+
+.separator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0; /* 👈 antes era mucho más */
+}
+
+
+.names-large{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2.5rem 0; /* separa de los separadores */
+  text-align: center;
+}
+
+.names-large .name{
+  font-family: 'Ballet', cursive;
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  color: var(--lila-text);
+  line-height: 1;
+}
+
+.names-large .amp{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: var(--lila-text);
+  opacity: 0.8;
+}
+.names-large{
+  margin: -2rem 0;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carousel{
+  position: relative;
+  width: min(900px, 90vw);
+  margin: 3rem auto;
+  overflow: hidden;
+}
+
+.carousel__track{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Cada imagen ocupa 1/3 */
+.carousel__track img{
+  width: calc(100% / 3);
+  flex-shrink: 0;
+  padding: 0 0.5rem;      /* espacio entre fotos */
+  border-radius: 14px;
+}
+
+/* Botones */
+.carousel__btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--lila-text);
+  z-index: 5;
+}
+
+.carousel__btn.prev{ left: 0.5rem; }
+.carousel__btn.next{ right: 0.5rem; }
+
+.carousel__btn:hover{
+  background: rgba(255,255,255,0.9);
+}
+
+.song{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem; /* separación respecto a la fecha */
+}
+
+.song__subtitle{
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: var(--lila-text);
+  opacity: 0.9;
+  margin: 0;
+}
+
+.song__btn{
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.song__icon{
+  width: 400px;  /* ajusta tamaño */
+  height: 100px;
+  display: block;
+}
+
+/* feedback visual cuando está sonando */
+.song__btn.is-playing .song__icon{
+  transform: scale(1.02);
+}
+
+/* =========================
+   CUENTA ATRÁS
+========================= */
+
+.countdown{
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+.countdown__subtitle{
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lila-text);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.countdown__grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(720px, 92vw);
+  margin: 0 auto;
+}
+
+.countdown__item{
+  padding: 0.8rem 0.6rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.30);
+  backdrop-filter: blur(6px);
+}
+
+.countdown__num{
+  display: block;
+  font-family: 'Cormorant Garamond', serif; /* como la fecha */
+  font-size: clamp(2rem, 5vw, 3.2rem);      /* MÁS GRANDE */
+  letter-spacing: 0.08em;
+  color: var(--lila-text);
+  line-height: 1;
+}
+
+.countdown__label{
+  display: block;
+  margin-top: 0.35rem;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--lila-text);
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 520px){
+  .countdown__grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.countdown{
+  text-align: center;
+  margin: 0.6rem auto 2rem; /* 👈 ahora sí se nota */
+  padding: 0 1.5rem;
+}
