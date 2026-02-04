@@ -97,3 +97,33 @@ function startCountdown(targetDateISO){
 document.addEventListener("DOMContentLoaded", () => {
   startCountdown("2026-07-18T18:00:00");
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("weddingSong");
+  const btn = document.querySelector(".song__btn");
+  const icon = document.querySelector(".song__icon");
+
+  if (!audio || !btn) return;
+
+  btn.addEventListener("click", async () => {
+    try {
+      if (audio.paused) {
+        await audio.play();
+        btn.classList.add("is-playing");
+        if (icon?.dataset.pause) icon.src = icon.dataset.pause;
+      } else {
+        audio.pause();
+        btn.classList.remove("is-playing");
+        if (icon?.dataset.play) icon.src = icon.dataset.play;
+      }
+    } catch (e) {
+      console.warn("No se pudo reproducir el audio:", e);
+    }
+  });
+
+  audio.addEventListener("ended", () => {
+    btn.classList.remove("is-playing");
+    if (icon?.dataset.play) icon.src = icon.dataset.play;
+  });
+});
